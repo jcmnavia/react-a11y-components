@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Button Default 1`] = `
+<button
+  disabled={false}
+  onClick={[Function]}
+  tabIndex={0}
+  type="button"
+>
+  Basic Log Button
+</button>
+`;
