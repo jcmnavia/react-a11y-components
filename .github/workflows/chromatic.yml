@@ -1,3 +1,4 @@
+name: Chromatic Workflow
 on:
   push:
     branches:
@@ -14,11 +15,13 @@ jobs:
   chromatic-deployment:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v1
       - name: Install dependencies
         run: yarn
       - name: Publish to Chromatic
         uses: chromaui/action@v1
         with:
+          workingDir: '.'
           token: ${{ secrets.GITHUB_TOKEN }}
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           exitZeroOnChanges: true
