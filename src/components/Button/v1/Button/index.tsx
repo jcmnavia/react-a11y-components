@@ -19,6 +19,7 @@ const Button: FC<ButtonProperties> = ({
       disabled={disabled}
       onClick={onClick}
       aria-label={ariaLabel}
+      style={{ fontSize: '24px', background: 'yellow' }}
       {...rest}
     >
       {children}
