@@ -3,3 +3,5 @@ src/assets/styles/
 src/utils/service-worker.ts
 src/setupTests.js
 craco.config.js
+build
+coverage

@@ -1,6 +1,9 @@
 on:
   push:
     branches:
+      - main
+  pull_request:
+    branches:
       - develop
       - 'release/**'
       - 'feature/**'
@@ -9,7 +12,10 @@ on:
       - 'chore/**'
 jobs:
   chromatic-deployment:
+    runs-on: ubuntu-latest
     steps:
+      - name: Install dependencies
+        run: yarn
       - name: Publish to Chromatic
         uses: chromaui/action@v1
         with:
