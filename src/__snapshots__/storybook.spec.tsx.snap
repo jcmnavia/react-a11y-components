@@ -4,12 +4,6 @@ exports[`Storyshots Button Default 1`] = `
 <button
   disabled={false}
   onClick={[Function]}
-  style={
-    Object {
-      "background": "yellow",
-      "fontSize": "24px",
-    }
-  }
   tabIndex={0}
   type="button"
 >
@@ -23,12 +17,6 @@ exports[`Storyshots Button Toggle Button 1`] = `
   disabled={false}
   name="Example"
   onClick={[Function]}
-  style={
-    Object {
-      "background": "yellow",
-      "fontSize": "24px",
-    }
-  }
   tabIndex={0}
   type="button"
 >
