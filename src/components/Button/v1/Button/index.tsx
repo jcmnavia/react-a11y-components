@@ -1,11 +1,5 @@
-import { FC, ButtonHTMLAttributes } from 'react';
-
-interface ButtonProperties extends ButtonHTMLAttributes<HTMLButtonElement> {
-  name: string;
-  ariaLabel: string;
-  type: 'button' | 'submit' | 'reset';
-  tabIndex?: number;
-}
+import { FC } from 'react';
+import { ButtonProperties } from './interfaces';
 
 const Button: FC<ButtonProperties> = ({
   ariaLabel,
@@ -32,5 +26,6 @@ const Button: FC<ButtonProperties> = ({
   );
 };
 
-export { Button, ButtonProperties };
+export { Button };
+export type { ButtonProperties };
 export default Button;

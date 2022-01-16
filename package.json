@@ -9,8 +9,10 @@
     "test:coverage": "craco test --verbose --env=jsdom  --coverage --watchAll=false",
     "eject": "craco eject",
     "lint": "eslint . --ext .js,.jsx,.ts,tsx",
+    "type-check": "tsc",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@craco/craco": "^5.7.0",
@@ -20,7 +22,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "^4.0.3",
-    "typescript": "^4.1.2",
+    "typescript": "^4.4.4",
     "web-vitals": "^1.0.1"
   },
   "devDependencies": {
@@ -46,32 +48,19 @@
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.21.5",
+    "husky": "^7.0.0",
     "prettier": "^2.1.2",
     "react-test-renderer": "^17.0.2"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ],
-    "overrides": [
-      {
-        "files": [
-          "**/*.stories.*"
-        ],
-        "rules": {
-          "import/no-anonymous-default-export": "off"
-        }
-      },
-      {
-        "files": [
-          "**/*.stories.*"
-        ],
-        "rules": {
-          "import/no-anonymous-default-export": "off"
-        }
+  "jest": {
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 90,
+        "lines": 90,
+        "statements": 90
       }
-    ]
+    }
   },
   "browserslist": {
     "production": [

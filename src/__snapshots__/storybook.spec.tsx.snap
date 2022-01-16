@@ -10,3 +10,16 @@ exports[`Storyshots Button Default 1`] = `
   Basic Log Button
 </button>
 `;
+
+exports[`Storyshots Button Toggle Button 1`] = `
+<button
+  aria-label="example label"
+  disabled={false}
+  name="Example"
+  onClick={[Function]}
+  tabIndex={0}
+  type="button"
+>
+  Basic Log Button
+</button>
+`;
