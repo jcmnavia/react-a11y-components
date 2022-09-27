@@ -7,11 +7,6 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Update NPM
-          command: 'sudo npm install -g yarn'
-      - restore_cache:
-          key: dependency-cache-{{ checksum "yarn.lock" }}
-      - run:
           name: Install Dependencies
           command: yarn install
       - save_cache:
@@ -19,15 +14,15 @@ jobs:
           paths:
             - ./node_modules
       - run:
-          name: Build React App
-          command: yarn build
+          name: Build StoryBook
+          command: yarn build-storybook
       - save_cache:
           key: app-build-cache-{{ .Branch }}
           paths:
-            - ./build
+            - ./storybook-static
       - run:
           name: Deploy to Netlify
-          command: ./node_modules/.bin/netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN --prod --dir=build
+          command: ./node_modules/.bin/netlify deploy --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN --prod --dir=storybook-static
 workflows:
   version: 2
   build-deploy:
