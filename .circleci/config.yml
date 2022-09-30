@@ -14,6 +14,15 @@ jobs:
           paths:
             - ./node_modules
       - run:
+          name: Run linters
+          command: yarn lint
+      - run:
+          name: Run typecheck
+          command: yarn type-check
+      - run:
+          name: Run tests
+          command: SKIP_PREFLIGHT_CHECK=true yarn test:coverage
+      - run:
           name: Build StoryBook
           command: yarn build-storybook
       - save_cache:
