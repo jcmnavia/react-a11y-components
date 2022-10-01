@@ -11,7 +11,7 @@ const Template: Story<FC<ButtonProperties>> = args => <Button {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  children: 'Basic Log Button',
+  children: 'CIRCLE CI DEPLOY',
   onClick: action('Button 1 clicked')
 };
 
