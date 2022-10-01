@@ -7,7 +7,7 @@ exports[`Storyshots Button Default 1`] = `
   tabIndex={0}
   type="button"
 >
-  Basic Log Button
+  CIRCLE CI DEPLOY
 </button>
 `;
 
